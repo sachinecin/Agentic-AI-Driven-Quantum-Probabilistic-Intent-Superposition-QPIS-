@@ -42,7 +42,7 @@ The system uses a **Neuro-Signal Mesh** to detect when probability density excee
 
 ## 🏗️ Architecture
 
-![QPIS Architecture](qpis_architecture.png)
+![QPIS Architecture](https://github.com/user-attachments/assets/ea7630bb-cbd3-4782-a39c-7ce51fbf36e4)
 
 The QPIS architecture consists of seven main layers:
 
