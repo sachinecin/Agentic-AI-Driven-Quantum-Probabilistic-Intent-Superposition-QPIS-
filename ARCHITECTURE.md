@@ -2,6 +2,14 @@
 
 ## Quantum-Probabilistic Intent Superposition (QPIS) System
 
+### 📊 Architecture Diagram
+
+![QPIS Architecture](https://github.com/user-attachments/assets/ea7630bb-cbd3-4782-a39c-7ce51fbf36e4)
+
+*The complete 7-layer QPIS architecture showing the flow from input to autonomous execution*
+
+---
+
 ### Overview
 
 The Quantum-Probabilistic Intent Superposition (QPIS) system represents a paradigm shift from traditional request-response architectures to a proactive, autonomous agentic AI system. Instead of treating intent as a discrete classification problem, QPIS maintains intent as a **superposition of all logically possible outcomes**, only committing to a singular execution path when a **Teleological Trigger** is reached.

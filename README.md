@@ -3,11 +3,24 @@
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
+**📊 [View Architecture Diagram](#-architecture-diagram)** | **📖 [Documentation](ARCHITECTURE.md)** | **🚀 [Quick Start](#-quick-start)** | **💡 [Examples](examples.py)**
+
 ## Overview
 
 The **Quantum-Probabilistic Intent Superposition (QPIS)** system represents a revolutionary paradigm shift in agentic AI architecture. Unlike traditional request-response systems that treat intent as a discrete classification problem, QPIS maintains intent as a **superposition of all logically possible outcomes**, only committing to a singular execution path when a **Teleological Trigger** is reached.
 
 This shifts the engineering focus from tracking **what a user is doing** to calculating the probability of **what a user is becoming** within a teleological loop.
+
+---
+
+## 📊 Architecture Diagram
+
+**🎨 [VIEW FULL ARCHITECTURE DIAGRAM ➜](#️-architecture)**
+
+The complete QPIS architecture diagram is available below in the [Architecture section](#️-architecture), showing all 7 layers of the system. You can also:
+- 📄 Read detailed architecture documentation: [ARCHITECTURE.md](ARCHITECTURE.md)
+- 🖼️ View the diagram file directly: [qpis_architecture.png](qpis_architecture.png)
+- 🔧 Generate your own diagram: Run `python architecture_diagram.py`
 
 ---
 
