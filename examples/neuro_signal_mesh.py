@@ -44,6 +44,7 @@ def main():
     print(f"   Detected {len(peaks)} heartbeats")
     
     # Compute HRV metrics
+    hrv_metrics = None
     if len(peaks) >= 2:
         rr_intervals = hrv_processor.compute_rr_intervals(peaks)
         hrv_metrics = hrv_processor.compute_metrics(rr_intervals)
@@ -113,8 +114,12 @@ def main():
     print("\n6. Synthesizing Latent Intent...")
     synthesizer = LatentIntentSynthesizer(latent_dim=128)
     
-    # Extract features
-    hrv_features = hrv_processor.extract_intent_features(hrv_metrics)
+    # Extract features - use defaults if hrv_metrics is None
+    if hrv_metrics:
+        hrv_features = hrv_processor.extract_intent_features(hrv_metrics)
+    else:
+        hrv_features = np.zeros(8)  # Default HRV features
+    
     haptic_features = haptic_processor.extract_intent_features(haptic_metrics)
     
     # Synthesize
