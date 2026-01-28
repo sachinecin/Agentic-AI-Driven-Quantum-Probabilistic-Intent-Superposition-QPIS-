@@ -1,0 +1,47 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "qpis"
+version = "0.1.0"
+description = "Quantum-Probabilistic Intent Superposition (QPIS) Framework for Agentic AI"
+readme = "README.md"
+requires-python = ">=3.8"
+license = {text = "MIT"}
+authors = [
+    {name = "QPIS Contributors"}
+]
+keywords = ["quantum", "intent", "ai", "agents", "teleological", "superposition"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+]
+
+dependencies = [
+    "numpy>=1.20.0",
+    "scipy>=1.7.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+    "pytest-cov>=3.0.0",
+    "black>=22.0.0",
+    "flake8>=4.0.0",
+    "mypy>=0.950",
+]
+
+[project.urls]
+Homepage = "https://github.com/sachinecin/Agentic-AI-Driven-Quantum-Probabilistic-Intent-Superposition-QPIS-"
+Repository = "https://github.com/sachinecin/Agentic-AI-Driven-Quantum-Probabilistic-Intent-Superposition-QPIS-"
+
+[tool.setuptools]
+packages = ["qpis"]
