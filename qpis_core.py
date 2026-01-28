@@ -4,7 +4,7 @@ Quantum-Probabilistic Intent Superposition System
 """
 
 import numpy as np
-from typing import Dict, List, Tuple, Optional
+from typing import Dict, List, Tuple, Optional, Any
 from dataclasses import dataclass, field
 from enum import Enum
 import time
@@ -59,7 +59,7 @@ class DigitalMicroGesture:
     repetition_count: int
     velocity: float  # Speed of action
     precision: float  # Accuracy of action
-    context: Dict[str, any] = field(default_factory=dict)
+    context: Dict[str, Any] = field(default_factory=dict)
 
 
 class IntentSuperposition:
@@ -118,7 +118,7 @@ class EntanglementCore:
     
     def __init__(self):
         self.user_state: Optional[PhysiologicalSignal] = None
-        self.environment_state: Dict[str, any] = {}
+        self.environment_state: Dict[str, Any] = {}
         self.entanglement_matrix = np.eye(2)  # 2x2 identity initially
     
     def update_user_state(self, physiological: PhysiologicalSignal):
@@ -126,7 +126,7 @@ class EntanglementCore:
         self.user_state = physiological
         self._update_entanglement()
     
-    def update_environment(self, context: Dict[str, any]):
+    def update_environment(self, context: Dict[str, Any]):
         """Update digital environment state"""
         self.environment_state = context
         self._update_entanglement()
@@ -171,7 +171,7 @@ class RecursiveTeleologicalBackPropagation:
         self.goal_states: List[GoalState] = []
         self.probability_flow: Dict[str, float] = {}
     
-    def generate_goal_states(self, context: Dict[str, any]) -> List[GoalState]:
+    def generate_goal_states(self, context: Dict[str, Any]) -> List[GoalState]:
         """Generate multiple possible future goal states"""
         # Simulated goal generation based on context
         goals = [
@@ -235,6 +235,8 @@ class RecursiveTeleologicalBackPropagation:
     ) -> float:
         """Calculate if user has energy to pursue goal"""
         energy_available = physiological.energy_of_intent
+        if goal.energy_required == 0:
+            return 1.0
         energy_ratio = min(energy_available / goal.energy_required, 1.0)
         return energy_ratio
 
@@ -341,8 +343,8 @@ class QPISAgent:
         self,
         physiological: PhysiologicalSignal,
         gesture: DigitalMicroGesture,
-        environment: Dict[str, any]
-    ) -> Dict[str, any]:
+        environment: Dict[str, Any]
+    ) -> Dict[str, Any]:
         """
         Main processing loop for QPIS
         """
