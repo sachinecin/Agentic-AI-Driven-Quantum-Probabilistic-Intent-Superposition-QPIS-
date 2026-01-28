@@ -1,0 +1,96 @@
+// QPIS Architecture
+digraph {
+	nodesep=0.8 rankdir=TB ranksep=1.2 splines=ortho
+	node [fillcolor=lightblue fontname=Arial fontsize=10 shape=box style="rounded,filled"]
+	fontname="Arial Bold" fontsize=16 label="Quantum-Probabilistic Intent Superposition (QPIS) Architecture" labelloc=t
+	subgraph cluster_input {
+		color=lightgrey fontsize=12 label="Input Layer" style=filled
+		user_actions [label="User Actions
+(Digital Micro-Gestures)" fillcolor="#E8F4F8"]
+		physiological [label="Physiological Signals
+(HRV, Haptics)" fillcolor="#E8F4F8"]
+		environmental [label="Environmental Context
+(Digital State)" fillcolor="#E8F4F8"]
+	}
+	subgraph cluster_entanglement {
+		color=lightgrey fontsize=12 label="Intention Entanglement Layer" style=filled
+		entropy_analyzer [label="Physiological Entropy
+Analyzer" fillcolor="#D4E6F1"]
+		cognitive_load [label="Cognitive Load
+Estimator" fillcolor="#D4E6F1"]
+		entanglement_core [label="Entanglement Core
+(User ⊗ Environment)" fillcolor="#A9CCE3"]
+	}
+	subgraph cluster_superposition {
+		color=lightgrey fontsize=12 label="Intent Superposition Management" style=filled
+		intent_states [label="Intent State
+Superposition
+|Ψ⟩ = Σ αᵢ|iᵢ⟩" fillcolor="#F9E79F"]
+		probability_calc [label="Probability
+Density Calculator" fillcolor="#F9E79F"]
+		goal_simulator [label="Multi-Goal State
+Simulator" fillcolor="#F9E79F"]
+	}
+	subgraph cluster_backprop {
+		color=lightgrey fontsize=12 label="Recursive Teleological Back-Propagation" style=filled
+		goal_states [label="Future Goal States
+Generator" fillcolor="#ABEBC6"]
+		backflow [label="Probability
+Back-Flow Engine" fillcolor="#ABEBC6"]
+		gradient_calc [label="Teleological
+Gradient Calculator" fillcolor="#ABEBC6"]
+	}
+	subgraph cluster_neurosignal {
+		color=lightgrey fontsize=12 label="Neuro-Signal Mesh" style=filled
+		signal_mesh [label="Signal Mesh
+Processor" fillcolor="#F5B7B1"]
+		stress_detector [label="Cognitive Stress
+Detector" fillcolor="#F5B7B1"]
+		priority_engine [label="Intent Priority
+Engine" fillcolor="#F5B7B1"]
+	}
+	subgraph cluster_measurement {
+		color=lightgrey fontsize=12 label="Measurement & Collapse Layer" style=filled
+		teleological_trigger [label="Teleological
+Trigger Detector" fillcolor="#D7BDE2"]
+		collapse_engine [label="Superposition
+Collapse Engine" fillcolor="#D7BDE2"]
+		measurement_event [label="Measurement Event
+(P(Gᵢ) > θ)" fillcolor="#D7BDE2"]
+	}
+	subgraph cluster_execution {
+		color=lightgrey fontsize=12 label="Autonomous Execution Layer" style=filled
+		action_selector [label="Optimal Action
+Selector" fillcolor="#C5E1A5"]
+		executor [label="Autonomous
+Executor" fillcolor="#C5E1A5"]
+		feedback_loop [label="Feedback Loop
+& Adaptation" fillcolor="#C5E1A5"]
+	}
+	user_actions -> entanglement_core [label="digital signals"]
+	physiological -> entropy_analyzer [label="bio signals"]
+	environmental -> entanglement_core [label=context]
+	entropy_analyzer -> cognitive_load
+	cognitive_load -> entanglement_core [label="energy of intent"]
+	entanglement_core -> intent_states [label="entangled state"]
+	intent_states -> probability_calc
+	probability_calc -> goal_simulator
+	goal_simulator -> goal_states [label="possible futures"]
+	goal_states -> backflow
+	backflow -> gradient_calc
+	gradient_calc -> intent_states [label="update probabilities" color=blue style=dashed]
+	physiological -> signal_mesh
+	user_actions -> signal_mesh
+	signal_mesh -> stress_detector
+	stress_detector -> priority_engine
+	priority_engine -> intent_states [label="priority weights"]
+	intent_states -> measurement_event [label="probability density"]
+	probability_calc -> measurement_event
+	entropy_analyzer -> teleological_trigger [label="entropy drop"]
+	measurement_event -> teleological_trigger
+	teleological_trigger -> collapse_engine [label="trigger fired"]
+	collapse_engine -> action_selector [label="collapsed intent"]
+	action_selector -> executor
+	executor -> feedback_loop
+	feedback_loop -> entanglement_core [label="state update" color=red style=dashed]
+}
